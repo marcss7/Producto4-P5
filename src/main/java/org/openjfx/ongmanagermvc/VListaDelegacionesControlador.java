@@ -22,6 +22,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class VListaDelegacionesControlador implements Initializable {
@@ -41,7 +42,6 @@ public class VListaDelegacionesControlador implements Initializable {
 	
 	@FXML
 	private Button botonEditar;
-	
 	@FXML
 	private Button botonCancelar;
 	
@@ -72,6 +72,7 @@ public class VListaDelegacionesControlador implements Initializable {
 			Stage stage = new Stage();
 			stage.setScene(new Scene(root));
 			stage.setTitle("Menú administrador");
+			stage.getIcons().add(new Image(getClass().getResourceAsStream("icon.png")));
 			stage.show();
 			((Node) (event.getSource())).getScene().getWindow().hide();
 		} catch (IOException e) {

@@ -12,6 +12,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class VInicioControlador implements Initializable {
@@ -32,6 +33,7 @@ public class VInicioControlador implements Initializable {
 			Stage stage = new Stage();
 			stage.setScene(new Scene(root));
 			stage.setTitle("Menú Adiministrador");
+			stage.getIcons().add(new Image(getClass().getResourceAsStream("icon.png")));
 			stage.show();
 			((Node) (event.getSource())).getScene().getWindow().hide();
 		} catch (IOException e) {
@@ -47,6 +49,7 @@ public class VInicioControlador implements Initializable {
 			Stage stage = new Stage();
 			stage.setScene(new Scene(root));
 			stage.setTitle("Menú empleado");
+			stage.getIcons().add(new Image(getClass().getResourceAsStream("icon.png")));
 			stage.show();
 			((Node) (event.getSource())).getScene().getWindow().hide();
 		} catch (IOException e) {

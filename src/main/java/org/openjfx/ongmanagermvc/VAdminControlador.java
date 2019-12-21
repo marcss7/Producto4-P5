@@ -12,6 +12,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class VAdminControlador implements Initializable {
@@ -38,6 +39,7 @@ public class VAdminControlador implements Initializable {
 			Stage stage = new Stage();
 			stage.setScene(new Scene(root));
 			stage.setTitle("Nuevo trabajador");
+			stage.getIcons().add(new Image(getClass().getResourceAsStream("icon.png")));
 			stage.show();
 			((Node) (event.getSource())).getScene().getWindow().hide();
 		} catch (IOException e) {
@@ -52,6 +54,7 @@ public class VAdminControlador implements Initializable {
 			Stage stage = new Stage();
 			stage.setScene(new Scene(root));
 			stage.setTitle("Listado trabajadores");
+			stage.getIcons().add(new Image(getClass().getResourceAsStream("icon.png")));
 			stage.show();
 			((Node) (event.getSource())).getScene().getWindow().hide();
 		} catch (IOException e) {
@@ -66,6 +69,7 @@ public class VAdminControlador implements Initializable {
 			Stage stage = new Stage();
 			stage.setScene(new Scene(root));
 			stage.setTitle("Nueva delegación");
+			stage.getIcons().add(new Image(getClass().getResourceAsStream("icon.png")));
 			stage.show();
 			((Node) (event.getSource())).getScene().getWindow().hide();
 		} catch (IOException e) {
@@ -80,6 +84,7 @@ public class VAdminControlador implements Initializable {
 			Stage stage = new Stage();
 			stage.setScene(new Scene(root));
 			stage.setTitle("Listado delegaciones");
+			stage.getIcons().add(new Image(getClass().getResourceAsStream("icon.png")));
 			stage.show();
 			((Node) (event.getSource())).getScene().getWindow().hide();
 		} catch (IOException e) {
@@ -94,6 +99,7 @@ public class VAdminControlador implements Initializable {
 			Stage stage = new Stage();
 			stage.setScene(new Scene(root));
 			stage.setTitle("ONGManager");
+			stage.getIcons().add(new Image(getClass().getResourceAsStream("icon.png")));
 			stage.show();
 			((Node) (event.getSource())).getScene().getWindow().hide();
 		} catch (IOException e) {

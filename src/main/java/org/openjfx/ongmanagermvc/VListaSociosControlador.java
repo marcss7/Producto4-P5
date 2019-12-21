@@ -17,6 +17,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -80,6 +81,7 @@ public class VListaSociosControlador implements Initializable{
 			Stage stage = new Stage();
 			stage.setScene(new Scene(root));
 			stage.setTitle("Menú empleado");
+			stage.getIcons().add(new Image(getClass().getResourceAsStream("icon.png")));
 			stage.show();
 			((Node) (event.getSource())).getScene().getWindow().hide();
 		} catch (IOException e) {
