@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="359.0" prefWidth="916.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.ongmanagermvc.VListaSociosControlador">
+   <children>
+      <TableView fx:id="table" layoutX="26.0" layoutY="21.0" prefHeight="256.0" prefWidth="865.0">
+        <columns>
+          <TableColumn fx:id="idSocio" prefWidth="45.0" text="Id" />
+          <TableColumn fx:id="nombre" prefWidth="71.0" text="Nombre" />
+            <TableColumn fx:id="apellidos" prefWidth="129.0" text="Apellidos" />
+            <TableColumn fx:id="nif" text="NIF" />
+            <TableColumn fx:id="telefono" prefWidth="86.0" text="Teléfono" />
+            <TableColumn fx:id="email" prefWidth="163.0" text="Email" />
+            <TableColumn fx:id="direccion" prefWidth="118.0" text="Dirección" />
+            <TableColumn fx:id="periodicidadCuota" minWidth="0.0" prefWidth="91.0" text="Cuota" />
+            <TableColumn fx:id="importeCuota" minWidth="0.0" prefWidth="69.0" text="Importe" />
+        </columns>
+      </TableView>
+      <Button fx:id="botonEditar" layoutX="336.0" layoutY="301.0" mnemonicParsing="false" onAction="#editarSocio" prefHeight="37.0" prefWidth="101.0" text="Editar" AnchorPane.leftAnchor="335.0" />
+      <Button fx:id="botonCancelar" layoutX="509.0" layoutY="301.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="37.0" prefWidth="101.0" text="Cancelar" AnchorPane.rightAnchor="335.0" />
+   </children>
+</AnchorPane>

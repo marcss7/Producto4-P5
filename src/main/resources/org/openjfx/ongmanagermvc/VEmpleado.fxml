@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.ongmanagermvc.VEmpleadoControlador">
+   <children>
+      <ImageView fitHeight="134.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo_entreculturas.png" />
+         </image>
+      </ImageView>
+      <Button id="botonNuevoSocio" layoutX="173.0" layoutY="159.0" mnemonicParsing="false" onAction="#abrirNuevoSocio" prefHeight="41.0" prefWidth="154.0" text="Nuevo socio" />
+      <Button id="botonListarSocios" layoutX="173.0" layoutY="230.0" mnemonicParsing="false" onAction="#abrirListarSocios" prefHeight="41.0" prefWidth="154.0" text="Listado de socios" />
+      <Button id="botonSalir" fx:id="botonCancelar" layoutX="173.0" layoutY="302.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="41.0" prefWidth="154.0" text="Cancelar" />
+   </children>
+</AnchorPane>

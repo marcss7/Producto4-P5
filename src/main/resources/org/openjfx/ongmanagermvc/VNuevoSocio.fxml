@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="539.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.ongmanagermvc.VNuevoSocioControlador">
+   <children>
+      <ImageView fitHeight="134.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo_entreculturas.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="campoNombre" layoutX="134.0" layoutY="187.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="43.0" layoutY="191.0" prefHeight="17.0" prefWidth="80.0" text="Nombre" textAlignment="JUSTIFY" />
+      <TextField fx:id="campoApellidos" layoutX="134.0" layoutY="229.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="43.0" layoutY="233.0" prefHeight="17.0" prefWidth="80.0" text="Apellidos" textAlignment="JUSTIFY" />
+      <TextField fx:id="campoNif" layoutX="134.0" layoutY="271.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="43.0" layoutY="275.0" prefHeight="17.0" prefWidth="80.0" text="NIF" textAlignment="JUSTIFY" />
+      <TextField fx:id="campoEmail" layoutX="134.0" layoutY="313.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="43.0" layoutY="317.0" prefHeight="17.0" prefWidth="80.0" text="Email" textAlignment="JUSTIFY" />
+      <TextField fx:id="campoTelefono" layoutX="134.0" layoutY="356.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="43.0" layoutY="360.0" prefHeight="17.0" prefWidth="80.0" text="Teléfono" textAlignment="JUSTIFY" />
+      <TextField fx:id="campoDireccion" layoutX="134.0" layoutY="399.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="43.0" layoutY="403.0" prefHeight="17.0" prefWidth="80.0" text="Dirección" textAlignment="JUSTIFY" />
+      <TextField fx:id="campoTipoCuota" layoutX="134.0" layoutY="441.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="43.0" layoutY="445.0" prefHeight="17.0" prefWidth="80.0" text="Cuota" textAlignment="JUSTIFY" />
+      <TextField fx:id="campoImporteCuota" layoutX="134.0" layoutY="479.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="43.0" layoutY="487.0" prefHeight="17.0" prefWidth="80.0" text="Importe cuota" textAlignment="JUSTIFY" />
+      <Button fx:id="botonCancelar" layoutX="348.0" layoutY="315.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="49.0" prefWidth="103.0" text="Cancelar" />
+      <Button fx:id="botonGuardarNuevoSocio" layoutX="348.0" layoutY="231.0" mnemonicParsing="false" onAction="#guardarSocio" prefHeight="49.0" prefWidth="103.0" text="Guardar" />
+      <Label layoutX="134.0" layoutY="141.0" prefHeight="25.0" prefWidth="221.0" text="Dar de alta un socio">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+
+   </children>
+</AnchorPane>
