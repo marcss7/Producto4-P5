@@ -2,11 +2,13 @@ package org.openjfx.ongmanagermvc;
 
 import java.util.ArrayList;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Transient;
 
 /**
  * Clase que representa cada una de las delegaciones que forman la ONG
@@ -16,14 +18,13 @@ import javax.xml.bind.annotation.XmlType;
  * @version 1.0
  *
  */
-@XmlRootElement(name = "delegacion")
-@XmlAccessorType(XmlAccessType.PUBLIC_MEMBER)
-@XmlType(propOrder={"idDelegacion", "nombreDelegacion", "telefono", "direccion", "isSedeCentral", "personalAdscrito", "listadoProyectos"})
+@Entity
+@Table(name="Delegaciones")
 public class Delegacion {
 	
 	// CAMPOS
 	private String nombreDelegacion;
-	private int idDelegacion;
+	private Integer idDelegacion;
 	private String direccion;
 	private String telefono;
 	private ArrayList<Personal> personalAdscrito;
@@ -52,7 +53,7 @@ public class Delegacion {
 	 * @param listadoProyectos Atributo que guarda el listado de proyectos de la delegacion.
 	 * @param isSedeCentral Atributo que guarda el id de la sede central a la que pertenece la delegacion. 
 	 */
-	public Delegacion(String nombreDelegacion, int idDelegacion, String direccion, String telefono,
+	public Delegacion(String nombreDelegacion, Integer idDelegacion, String direccion, String telefono,
 			ArrayList<Personal> personalAdscrito, ArrayList<Proyecto> listadoProyectos, Boolean isSedeCentral) {
 		super();
 		this.nombreDelegacion = nombreDelegacion;
@@ -73,7 +74,7 @@ public class Delegacion {
 	 * @return nos devuelve el nombre de la delegacion.	 
 	 *
 	 */
-	@XmlElement(name = "nombre")
+	@Column(name="nombre")
 	public String getNombreDelegacion() {
 		return nombreDelegacion;
 	}
@@ -92,8 +93,10 @@ public class Delegacion {
 	 * 
 	 * @return id de la delegacion.
 	 */
-	@XmlElement(name = "id")
-	public int getIdDelegacion() {
+	@Id
+	@Column(name="id_delegacion")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	public Integer getIdDelegacion() {
 		return idDelegacion;
 	}
 
@@ -102,7 +105,7 @@ public class Delegacion {
 	 * 
 	 * @param idDelegacion id de la delegacion
 	 */
-	public void setIdDelegacion(int idDelegacion) {
+	public void setIdDelegacion(Integer idDelegacion) {
 		this.idDelegacion = idDelegacion;
 	}
 
@@ -111,7 +114,7 @@ public class Delegacion {
 	 * 
 	 * @return la direccion de la delegacion.
 	 */
-	@XmlElement(name = "direccion")
+	@Column(name="direccion")
 	public String getDireccion() {
 		return direccion;
 	}
@@ -130,7 +133,7 @@ public class Delegacion {
 	 *  
 	 * @return el telefono de la delegacion. 
 	 */
-	@XmlElement(name = "telefono")
+	@Column(name="telefono")
 	public String getTelefono() {
 		return telefono;
 	}
@@ -149,7 +152,7 @@ public class Delegacion {
 	 * 
 	 * @return la lista de personal que pertenece a la delegacion.
 	 */
-	@XmlElement(name = "personal")
+	@Transient
 	public ArrayList<Personal> getPersonalAdscrito() {
 		return personalAdscrito;
 	}
@@ -168,7 +171,7 @@ public class Delegacion {
 	 * 
 	 * @return el listado de proyectos de la delegacion. 
 	 */
-	@XmlElement(name = "proyectos")
+	@Transient
 	public ArrayList<Proyecto> getListadoProyectos() {
 		return listadoProyectos;
 	}
@@ -187,7 +190,7 @@ public class Delegacion {
      * 
      * @return True si es sede central, false si no lo es.
      */
-	@XmlElement(name = "isSedeCentral")
+	@Column(name="sede_central")
 	public Boolean getIsSedeCentral() {
 		return isSedeCentral;
 	}

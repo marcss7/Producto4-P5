@@ -15,7 +15,7 @@
       <Button fx:id="botonNuevoTrabajador" layoutX="73.0" layoutY="180.0" mnemonicParsing="false" onAction="#abrirNuevoTrabajador" prefHeight="40.0" prefWidth="155.0" text="Nuevo trabajador" AnchorPane.leftAnchor="70.0" />
       <Button fx:id="botonListarTrabajadores" layoutX="275.0" layoutY="180.0" mnemonicParsing="false" onAction="#abrirListarTrabajadores" prefHeight="40.0" prefWidth="155.0" text="Lista de trabajadores" AnchorPane.rightAnchor="70.0" />
       <Button fx:id="botonNuevaDelegacion" layoutX="82.0" layoutY="250.0" mnemonicParsing="false" onAction="#abrirNuevaDelegacion" prefHeight="40.0" prefWidth="155.0" text="Nueva delegación" AnchorPane.leftAnchor="70.0" />
-      <Button fx:id="botonListarDelegaciones" layoutX="262.0" layoutY="250.0" mnemonicParsing="false" onAction="#abrirListarTrabajadores" prefHeight="40.0" prefWidth="155.0" text="Lista de delegaciones" AnchorPane.rightAnchor="70.0" />
+      <Button fx:id="botonListarDelegaciones" layoutX="262.0" layoutY="250.0" mnemonicParsing="false" onAction="#abrirListarDelegaciones" prefHeight="40.0" prefWidth="155.0" text="Lista de delegaciones" AnchorPane.rightAnchor="70.0" />
       <Button fx:id="botonCancelar" layoutX="173.0" layoutY="319.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="40.0" prefWidth="155.0" text="Cancelar" />
    </children>
 </AnchorPane>
