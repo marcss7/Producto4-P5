@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="351.0" prefWidth="1059.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.ongmanagermvc.VListaTrabajadoresControlador">
+   <children>
+      <TableView fx:id="table" layoutX="27.0" layoutY="23.0" prefHeight="235.0" prefWidth="1006.0">
+        <columns>
+          <TableColumn fx:id="idTrabajador" prefWidth="41.0" text="Id" />
+          <TableColumn fx:id="nombre" prefWidth="76.0" text="Nombre" />
+            <TableColumn fx:id="apellidos" prefWidth="101.0" text="Apellidos" />
+            <TableColumn fx:id="nif" prefWidth="73.0" text="NIF" />
+            <TableColumn fx:id="email" prefWidth="137.0" text="Email" />
+            <TableColumn fx:id="direccion" prefWidth="128.0" text="Dirección" />
+            <TableColumn fx:id="telefono" prefWidth="69.0" text="Telefono" />
+            <TableColumn fx:id="delegacion" prefWidth="74.0" text="Delegación" />
+            <TableColumn fx:id="antiguedad" prefWidth="112.0" text="Antigüedad" />
+            <TableColumn fx:id="horarioLaboral" prefWidth="105.0" text="Horario" />
+            <TableColumn fx:id="pass" prefWidth="72.0" text="Contraseña" />
+        </columns>
+      </TableView>
+      <Button fx:id="botonEditar" layoutX="400.0" layoutY="282.0" mnemonicParsing="false" onAction="#editarTrabajador" prefHeight="40.0" prefWidth="100.0" text="Editar" AnchorPane.leftAnchor="400.0" />
+      <Button fx:id="botonCancelar" layoutX="558.0" layoutY="282.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="40.0" prefWidth="100.0" text="Cancelar" AnchorPane.rightAnchor="401.0" />
+   </children>
+</AnchorPane>
