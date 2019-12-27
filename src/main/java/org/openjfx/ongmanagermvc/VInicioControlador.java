@@ -32,8 +32,9 @@ public class VInicioControlador implements Initializable {
 			Parent root = (Parent) fxmlLoader.load();
 			Stage stage = new Stage();
 			stage.setScene(new Scene(root));
-			stage.setTitle("Menú Adiministrador");
+			stage.setTitle("Menú Administrador");
 			stage.getIcons().add(new Image(getClass().getResourceAsStream("icon.png")));
+			stage.setResizable(false);
 			stage.show();
 			((Node) (event.getSource())).getScene().getWindow().hide();
 		} catch (IOException e) {
@@ -50,6 +51,7 @@ public class VInicioControlador implements Initializable {
 			stage.setScene(new Scene(root));
 			stage.setTitle("Menú empleado");
 			stage.getIcons().add(new Image(getClass().getResourceAsStream("icon.png")));
+			stage.setResizable(false);
 			stage.show();
 			((Node) (event.getSource())).getScene().getWindow().hide();
 		} catch (IOException e) {

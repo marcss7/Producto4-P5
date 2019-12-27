@@ -73,6 +73,7 @@ public class VListaDelegacionesControlador implements Initializable {
 			stage.setScene(new Scene(root));
 			stage.setTitle("Menú administrador");
 			stage.getIcons().add(new Image(getClass().getResourceAsStream("icon.png")));
+			stage.setResizable(false);
 			stage.show();
 			((Node) (event.getSource())).getScene().getWindow().hide();
 		} catch (IOException e) {

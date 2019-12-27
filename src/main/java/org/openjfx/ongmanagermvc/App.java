@@ -21,6 +21,7 @@ public class App extends Application {
         stage.setScene(scene);
         stage.setTitle("ONGManager");
         stage.getIcons().add(new Image(getClass().getResourceAsStream("icon.png")));
+        stage.setResizable(false);
         stage.show();
     }
 
