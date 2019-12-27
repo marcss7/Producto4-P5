@@ -19,6 +19,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -88,7 +89,17 @@ public class VListaDelegacionesControlador implements Initializable {
 		nombre.setCellValueFactory(new PropertyValueFactory<Delegacion, String>("nombreDelegacion"));
 		telefono.setCellValueFactory(new PropertyValueFactory<Delegacion, String>("telefono"));
 		direccion.setCellValueFactory(new PropertyValueFactory<Delegacion, String>("direccion"));
+		
 		sedeCentral.setCellValueFactory(new PropertyValueFactory<Delegacion, Boolean>("isSedeCentral"));
+		sedeCentral.setCellFactory(tc -> new TableCell<Delegacion, Boolean>() {
+		    @Override
+		    protected void updateItem(Boolean item, boolean empty) {
+		        super.updateItem(item, empty);
+		        setText(empty ? null :
+		            item.booleanValue() ? "Sí" : "No");
+		    }
+		});
+		
 		table.setItems(getDelegaciones());
 	}
 

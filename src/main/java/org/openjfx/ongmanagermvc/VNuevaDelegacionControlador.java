@@ -8,6 +8,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,6 +17,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
@@ -38,7 +40,7 @@ public class VNuevaDelegacionControlador implements Initializable {
 	private TextField campoTelefono;
 	
 	@FXML
-	private TextField campoSedeCentral;
+	private ComboBox<String> campoSedeCentral;
 
 	public void guardarDelegacion(ActionEvent event) {
 		
@@ -52,7 +54,18 @@ public class VNuevaDelegacionControlador implements Initializable {
 		nuevaDelegacion.setNombreDelegacion(campoNombre.getText());
 		nuevaDelegacion.setDireccion(campoDireccion.getText());
 		nuevaDelegacion.setTelefono(campoTelefono.getText());
-		nuevaDelegacion.setIsSedeCentral(Boolean.parseBoolean(campoSedeCentral.getText()));
+		
+		switch (campoSedeCentral.getSelectionModel().getSelectedItem().toString()) {
+		case "Sí":
+			nuevaDelegacion.setIsSedeCentral(true);
+			break;
+	
+		case "No":
+			nuevaDelegacion.setIsSedeCentral(false);
+			break;
+		default:
+			break;
+	}
 
 		entityManager.persist(nuevaDelegacion);
 		
@@ -86,7 +99,7 @@ public class VNuevaDelegacionControlador implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
+		campoSedeCentral.setItems(FXCollections.observableArrayList("Sí", "No"));
 
 	}
 
