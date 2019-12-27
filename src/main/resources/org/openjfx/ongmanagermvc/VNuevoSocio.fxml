@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -27,8 +28,8 @@
       <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="43.0" layoutY="360.0" prefHeight="17.0" prefWidth="80.0" text="Teléfono" textAlignment="JUSTIFY" />
       <TextField fx:id="campoDireccion" layoutX="134.0" layoutY="399.0" />
       <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="43.0" layoutY="403.0" prefHeight="17.0" prefWidth="80.0" text="Dirección" textAlignment="JUSTIFY" />
-      <TextField fx:id="campoTipoCuota" layoutX="134.0" layoutY="441.0" />
-      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="43.0" layoutY="445.0" prefHeight="17.0" prefWidth="80.0" text="Cuota" textAlignment="JUSTIFY" />
+      <ComboBox fx:id="campoTipoCuota" layoutX="134.0" layoutY="441.0" prefWidth="150.0"/>
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="43.0" layoutY="445.0" prefHeight="17.0" prefWidth="80.0" text="Tipo de cuota" textAlignment="JUSTIFY" />
       <TextField fx:id="campoImporteCuota" layoutX="134.0" layoutY="479.0" />
       <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="43.0" layoutY="487.0" prefHeight="17.0" prefWidth="80.0" text="Importe cuota" textAlignment="JUSTIFY" />
       <Button fx:id="botonCancelar" layoutX="348.0" layoutY="315.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="49.0" prefWidth="103.0" text="Cancelar" />

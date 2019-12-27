@@ -8,6 +8,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,6 +18,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
@@ -48,7 +51,7 @@ public class VNuevoSocioControlador implements Initializable {
 	private TextField campoEmail;
 	
 	@FXML
-	private TextField campoTipoCuota;
+	private ComboBox<String> campoTipoCuota;
 	
 	@FXML
 	private TextField campoImporteCuota;
@@ -69,15 +72,15 @@ public class VNuevoSocioControlador implements Initializable {
 		nuevoSocio.setTelefono(campoTelefono.getText());
 		nuevoSocio.setDireccion(campoDireccion.getText());
 		
-		switch (campoTipoCuota.getText().toUpperCase()) {
-			case "M":
+		switch (campoTipoCuota.getSelectionModel().getSelectedItem().toString()) {
+			case "A":
 				nuevoSocio.setPeriodicidadCuota(TipoAportacion.MENSUAL);
 				break;
 		
-			case "T":
+			case "M":
 				nuevoSocio.setPeriodicidadCuota(TipoAportacion.TRIMESTRAL);
 				break;
-			case "A":
+			case "T":
 				nuevoSocio.setPeriodicidadCuota(TipoAportacion.ANUAL);
 				break;
 			default:
@@ -118,7 +121,7 @@ public class VNuevoSocioControlador implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
+		campoTipoCuota.setItems(FXCollections.observableArrayList("A", "M", "T"));
 
 	}
 
