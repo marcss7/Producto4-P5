@@ -1,30 +1,21 @@
 package org.openjfx.ongmanagermvc;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.image.Image;
-import javafx.stage.Stage;
 
 public class VListaDelegacionesControlador implements Initializable {
 	
@@ -67,19 +58,7 @@ public class VListaDelegacionesControlador implements Initializable {
 	}
 	
 	public void cancelar(ActionEvent event) {
-		try {
-			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("VAdmin.fxml"));
-			Parent root = (Parent) fxmlLoader.load();
-			Stage stage = new Stage();
-			stage.setScene(new Scene(root));
-			stage.setTitle("Menú administrador");
-			stage.getIcons().add(new Image(getClass().getResourceAsStream("icon.png")));
-			stage.setResizable(false);
-			stage.show();
-			((Node) (event.getSource())).getScene().getWindow().hide();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		VInicioControlador.abrirOtraVista(event, "VAdmin.fxml", "Menú Administrador");
 	}
 
 	@Override
